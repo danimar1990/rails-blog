@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "rails-blog",
+            "database": "${workspaceFolder:blog}/db/development.sqlite3"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
