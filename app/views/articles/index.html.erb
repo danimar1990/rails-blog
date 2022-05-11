@@ -35,14 +35,16 @@
                                     <%= article.body %>
                                 </td>
                                 <td>
-                                    <%# <%= link_to "Edit", article, class: "btn btn-primary" %>
-                                    <a class="btn btn-primary" href="<%= article_path(article) %>" role="button"><i class="fa fa-edit"></i> Edit</a>
+                                    <a class="btn btn-warning" href="<%= article_path(article) %>" role="button"><i class="fa fa-edit"></i> Edit</a>
                                     <a class="btn btn-danger" href="<%= article_path(article) %>" role="button"><i class="fa fa-trash"></i> Delete</a>
                                 </td>
                             </tr>
                             <% end %>
                         </tbody>
                     </table>
+                    <div>
+                        <%= link_to "New article", new_article_path, class: "btn btn-primary" %>
+                    </div>
                 </div>
             </div>
 
