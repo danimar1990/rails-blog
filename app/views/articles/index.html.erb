@@ -10,7 +10,6 @@
 	<body>
         <div class="container">
             <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Articles</h4>
                     <table class="table table-striped|sm|bordered|hover|inverse table-inverse table-responsive">
@@ -35,8 +34,7 @@
                                     <%= article.body %>
                                 </td>
                                 <td>
-                                    <a class="btn btn-warning" href="<%= article_path(article) %>" role="button"><i class="fa fa-edit"></i> Edit</a>
-                                    <a class="btn btn-danger" href="<%= article_path(article) %>" role="button"><i class="fa fa-trash"></i> Delete</a>
+                                    <%= link_to 'Edit', edit_article_path(article.id), class: 'btn btn-warning' %>
                                 </td>
                             </tr>
                             <% end %>

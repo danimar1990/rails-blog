@@ -1,0 +1,26 @@
+<%= form_with model: article, html: {class: "d-flex"} do |form| %>
+    <div class="row">
+        <div class="col-md-12">
+            <%= form.label :title, html: {class: "form-label"} %>
+            <%= form.text_field :title, html: {class: "form-control"} %>
+            <% article.errors.full_messages_for(:title).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <%= form.label :body, html: {class: "form-label"} %>
+            <%= form.text_area :body, html: {class: "form-control"} %>
+            <% article.errors.full_messages_for(:body).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <%= form.submit :Save, class:"btn btn-primary" %>
+            <%= link_to "Return", root_path, class:"btn btn-dark" %>
+        </div>
+    </div>
+<% end %>
